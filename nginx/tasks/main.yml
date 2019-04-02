@@ -1,0 +1,10 @@
+---
+- name: Install nginx
+  package:
+    name: nginx
+
+- name: Restart and enable nginx
+  systemd:
+    name: nginx
+    state: restarted
+    enabled: true
